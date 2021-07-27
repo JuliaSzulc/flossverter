@@ -1,0 +1,376 @@
+number,pl,name,rgb
+1500,biały,white,e6e5e3
+1501,cytrynowy najjaśniejszy,lemon brightest,e0d17c
+1502,cytrynowy jasny,light lemon,dcd65c
+1503,cytrynowy,lemon,e0c51c
+1504,cytrynowy ciemny,lemon dark,e2b71d
+1505,cytrynowy bardzo ciemny,lemon very dark,dea91f
+1506,cytrynowy najciemniejszy,lemon the darkest,de8b21
+1507,żółty pastelowy najjaśniejszy,brightest pastel yellow,e4dabf
+1508,żółty pastelowy jasny,light pastel yellow,e2c76c
+1509,żółty pastelowy,pastel yellow,e1a632
+1510,żółty pastelowy ciemny,dark pastel yellow,df8e25
+1511,żółty pastelowy najciemniejszy,the darkest pastel yellow,d66523
+1512,słoneczny najjaśniejszy,sunny brightest,e1d297
+1513,słoneczny jasny,sunny bright,e4ca5b
+1514,pomarańczowy bardzo jasny,very bright orange,e4b332
+1515,pomarańczowy jasny,bright orange,e38d2a
+1516,pomarańczowy,orange,df6e2a
+1517,pomarańczowy ciemny,dark orange,db522e
+1518,mandarynkowy bardzo jasny,tangerine very light,db4d39
+1519,mandarynkowy jasny,light tangerine,d9302d
+1520,mandarynkowy,tangerine,cd3230
+1521,mandarynkowy ciemny,dark tangerine,d73230
+1522,jaskrawy pomarańczowy,bright orange,dc412b
+1523,jaskrawy pomarańczowy średni,bright orange medium,da4e2d
+1524,morelowy najjaśniejszy,apricot the lightest,ddd0bd
+1525,morelowy bardzo jasny,apricot very light,e0bd95
+1526,morelowy jasny,apricot light,dc9b5b
+1527,morelowy,apricot,df6a35
+1528,morelowy ciemny,apricot dark,db462e
+1529,morelowy bardzo ciemny apricot vy dk,apricot very dark apricot vy dk,d23931
+1530,morelowy najciemniejszy,apricot the darkest,c32931
+1531,miedziany bardzo jasny,very light copper,e1833b
+1532,miedziany jasny,bright copper,d97730
+1533,miedziany,copper,d4562e
+1534,miedziany średni,copper medium,d73f31
+1535,miedziany ciemny,copper dark,c43232
+1536,łososiowy jasny,light salmon,f39b83
+1537,łososiowy,salmon,f69b66
+1538,łososiowy ciemny,dark salmon,f15e54
+1539,koralowy jasny,light coral,e24558
+1540,koralowy,coral,e5282e
+1541,koralowy średni,coral medium,dc212c
+1542,koralowy ciemny,coral dark,c9222c
+1543,melon jasny,light melon,f4cbd1
+1544,melon,melon,f99a7c
+1545,melon średni,medium melon,ec4771
+1546,melon ciemny,dark melon,e91d36
+1547,czerwień świąteczna jasna,holiday red bright,db1e30
+1548,czerwień świąteczna,holiday red,c4222f
+1549,różowy jasny,light pink,f183a6
+1550,różowy,pink,f45c99
+1551,różowy ciemny,dark pink,ed2264
+1552,różowy najciemniejszy,pink the darkest,ee1f3b
+1553,jasna czerwień,bright red,e71e28
+1554,czerwień,red,cf1f29
+1555,czerwień ciemna,dark red,ad242e
+1556,owoc granatu średni,pomegranate medium,922731
+1557,owoc granatu ciemny,dark pomegranate,79262e
+1558,żurawinowy najjaśniejszy,cranberry brightest,f27096
+1559,żurawinowy jasny,light cranberry,f02960
+1560,żurawinowy średni,medium cranberry,e41a4a
+1561,żurawinowy ciemny,cranberry dark,bd2244
+1562,żurawinowy,cranberry,ed1f43
+1563,malinowy,raspberry,c92435
+1564,malinowy najjaśniejszy,raspberry the brightest,f282a8
+1565,malinowy jasny,light raspberry,e13f6e
+1566,malinowy ciemny,raspberry dark,9b2531
+1567,różowofioletowy jasny,light pink-purple,e83392
+1568,różowofioletowy,pink-purple,e51577
+1569,różowofioletowy ciemny,dark pink-purple,d71b4b
+1570,purpurowofioletowy jasny,light purple-violet,cd2a6d
+1571,purpurowofioletowy,purple-violet,952949
+1572,purpurowofioletowy ciemny,purple-purple dark,862838
+1573,purpurowofioletowy najciemniejszy,purple-violet the darkest,762a37
+1574,perłoworóżowy ciemny,pearl pink dark,a12e3f
+1575,perłoworóżowy najjaśniejszy,pearl pink the brightest,e17d89
+1576,perłoworóżowy,pearl pink,cb516a
+1577,perłoworóżowy średni,medium pearl pink,b53b52
+1578,antyczny różowy jasny,antique bright pink,da86a7
+1579,antyczny różowy,antique pink,c16187
+1580,antyczny fiolet ciemny,antique dark violet,674f5f
+1581,antyczny fiolet bardzo jasny,antique violet very bright,cab1c6
+1582,antyczny fiolet jasny,antique light violet,a886a1
+1583,antyczny różowy ciemny,antique dark pink,6a445d
+1584,śliwkowy ciemny,plum dark,482840
+1585,śliwkowy,plum,6a3059
+1586,śliwkowy jasny,light plum,b668a4
+1587,fioletowy najjaśniejszy,purple the brightest,c9a3d4
+1588,fioletowy bardzo ciemny,purple very dark,302b54
+1589,fioletowy najciemniejszy,purple the darkest,2c2849
+1590,fioletowy ciemny,dark purple,552b6d
+1591,fioletowy,Violet,8c3a9e
+1592,fioletowy jasny,light purple,b582c5
+1593,śliwkowy najjaśniejszy,brightest plum,d699c5
+1594,bardzo ciemny wrzos,very dark heather,792e8d
+1595,ciemny wrzos,dark heather,8e3295
+1596,wrzos,heather,aa329c
+1597,jasny wrzos,bright heather,c47dbf
+1598,bardzo jasny wrzos,very light heather,e1a8d3
+1599,liliowy bardzo ciemny,lilac very dark,ad1e5e
+1600,liliowy ciemny,lilac dark,d02295
+1601,liliowy,lilac,de5aae
+1602,liliowy jasny,light lilac,df78bf
+1603,liliowy bardzo jasny,lilac very light,f2a1c1
+1604,fioletowoniebieski jasny,light violet blue,6978c9
+1605,fioletowoniebieski ciemny,dark violet blue,3952a6
+1606,fioletowoniebieski najciemniejszy,purple-blue the darkest,3a3f83
+1607,fioletowoniebieski najjaśniejszy,violet blue the lightest,96abd8
+1608,fioletowoniebieski,violet blue,718bc8
+1609,fioletowoniebieski bardzo ciemny,violet-blue very dark,324f9f
+1610,błękitny bardzo jasny,blue is very clear,b3d2d5
+1611,błękitny jasny,light blue,99cadb
+1612,błękitny bardzo ciemny,blue very dark,1e89d7
+1613,błękitny najciemniejszy,blue the darkest,284c86
+1614,niebieski jasny,light blue,a1cee5
+1615,niebieski,blue,74aed6
+1616,niebieski ciemny,dark blue,4f8bc1
+1617,niebieski bardzo ciemny,very dark blue,2a528f
+1618,niebieski najciemniejszy,blue the darkest,30436d
+1619,błękitny,blue,30aee9
+1620,błękitny ciemny,blue dark,52c2da
+1621,chabrowy najjaśniejszy,cornflower the brightest,a1c6e1
+1622,chabrowy bardzo jasny,cornflower very light,6ca3db
+1623,chabrowy jasny,light cornflower,4f8fcc
+1624,chabrowy ciemny,cornflower dark,324f9f
+1625,chabrowy bardzo ciemny,cornflower very dark,323a8d
+1626,szmaragdowy ciemny,emerald dark,2d3451
+1627,szmaragdowy bardzo ciemny,emerald very dark,30416d
+1628,chabrowy,blue,3974c2
+1629,granatowy,navy,2d5394
+1630,granatowy najciemniejszy,navy the darkest,262d40
+1631,niebieski antyczny najjaśniejszy,antique blue the brightest,bad2dc
+1632,niebieski antyczny bardzo jasny,very bright antique blue,acc5cc
+1633,niebieski antyczny ciemny,dark antique blue,557490
+1634,niebieski antyczny jasny,light antique blue,82a2bb
+1635,stalowoszary jasny,light steel gray,8e96a9
+1636,stalowoszary ciemny,dark steel gray,454f58
+1637,niebieski antyczny,antique blue,587b99
+1638,niebieski antyczny najciemniejszy,antique blue darkest,395773
+1639,morski najjaśniejszy,marine brightest,c0dadb
+1640,morski bardzo jasny,sea ​​very bright,b1cdce
+1641,morski jasny,sea ​​bright,5daab0
+1642,morski,maritime,2e6f85
+1643,ciemny morski,dark sea,2b6b97
+1644,bardzo ciemny morski,very dark sea,224958
+1645,szarozielony bardzo jasny,very light gray-green,bec8bd
+1646,szarozielony jasny,light gray-green,98afa7
+1647,szarozielony,gray-green,688c88
+1648,szarozielony ciemny,dark gray-green,496b74
+1649,szarozielony najciemniejszy,gray-green the darkest,30525b
+1650,bardzo jasny turkus,very light turquoise,b8dfdc
+1651,jasny turkus,bright turquoise,8fc8c1
+1652,turkus,turquoise,52c1dc
+1653,ciemny turkus,dark turquoise,41b3cd
+1654,bardzo ciemny turkus,very dark turquoise,44a9bd
+1655,najciemniejszy turkus,the darkest turquoise,38a2ca
+1656,turkusowozielony najjaśniejszy,turquoise green the lightest,c7e9d9
+1657,turkusowozielony jasny,light turquoise green,88d4ba
+1658,zielony morski,sea ​​green,348670
+1659,zielony morski jasny,light sea green,5aa89a
+1660,turkusowozielony,turquoise green,57c0a1
+1661,turkusowozielony ciemny,turquoise green dark,40af8f
+1662,turkusowozielony bardzo ciemny,turquoise-green very dark,3c9f8a
+1663,jasny groszek,bright peas,a5dd94
+1664,groszek,peas,84cb7b
+1665,przybrudzony szmaragdowy jasny,dirty light emerald,69c390
+1666,przybrudzony szmaragdowy,dirty emerald,539e80
+1667,przybrudzony szmaragdowy ciemny,dirty emerald dark,3c8069
+1668,przybrudzony szmarag. najciem.,dirty emerald. lease.,346a5d
+1669,tymniankowy jasny,thyme bright,98b096
+1670,tymniankowy,thyme,8fa388
+1671,tymniankowy ciemny,thyme dark,567d60
+1672,tymniankowy najciemniejszy,Tymniankowy the darkest,38513b
+1673,przybrudzona zieleń,dirty green,88ab6b
+1674,przybrudzona zieleń ciemna,dirty dark green,395144
+1675,akwamaryna najciemniejsza,the darkest aquamarine,bec889
+1676,akwamaryna,aquamarine,53a660
+1677,akwamaryna średnia,medium aquamarine,409458
+1678,akwamaryna ciemna,dark aquamarine,36744d
+1679,akwamaryna jasna,pale aquamarine,88ab6b
+1680,zieleń jasna,light green,72ac3e
+1681,zieleń,green,3c814a
+1682,zieleń ciemna,dark green,336f4b
+1683,zielony najjaśniejszy,green the brightest,cfd491
+1684,zielony bardzo jasny,very light green,96ae4c
+1685,zielony jasny,light green,768b46
+1686,zielony,green,53623b
+1687,zielony ciemny,dark green,457948
+1688,zielony bardzo ciemny,very dark green,37613d
+1689,zielony najciemniejszy,green the darkest,314834
+1690,zieleń awokado najjaśniejsza,the brightest avocado green,bab648
+1691,zieleń awokado bardzo jasna,the avocado green is very bright,98a249
+1692,zieleń awokado jasna,light avocado green,748139
+1693,zieleń awokado,avocado green,616a33
+1694,zieleń awokado ciemna,dark avocado green,535a38
+1695,zieleń papuzia najjaśniejsza,the brightest green parrot,cdc24e
+1696,zieleń papuzia bardzo jasna,very bright green parrot,bcb22e
+1697,zieleń papuzia jasna,light green parrot,aba125
+1698,zieleń papuzia,green parrot,8fac2c
+1699,zieleń papuzia ciemna,green dark parrot,61983b
+1700,zieleń papuzia bardzo ciemna,green very dark parrot,3e8340
+1701,zieleń papuzia najciemniejsza,green the darkest parrot,38713a
+1702,zieleń khaki najjaśniejsza,khaki green the brightest,c5cd92
+1703,zieleń khaki bardzo jasna,the khaki green is very bright,9fa662
+1704,zieleń khaki jasna,light khaki green,7f8954
+1705,zieleń khaki,khaki green,9ba753
+1706,zieleń khaki ciemna,dark khaki green,4a502e
+1707,zieleń khaki bardzo ciemna,very dark khaki green,3f4835
+1708,spłowiała oliwka,a faded olive,d6da7c
+1709,oliwkowozielony bardzo jasny,olive green very light,c4a634
+1710,oliwkowozielony jasny,light olive green,b2912a
+1711,oliwkowozielony,olive green,7d622b
+1712,oliwkowozielony średni,olive green medium,6b542b
+1713,oliwkowozielony ciemny,olive green dark,4e5a34
+1714,oliwkowozielony najciemniejszy,olive green the darkest,363f2e
+1715,złota oliwka jasna,golden olive light,c19a25
+1716,złota oliwka,golden olive,8f7e38
+1717,złota oliwka ciemna,golden olive dark,69632f
+1718,złota oliwka najciemniejsza,golden olive the darkest,504227
+1719,oliwkowobrązowy jasny,light olive brown,d6b453
+1720,oliwkowobrązowy najjaśniejszy,olive brown the lightest,efd274
+1721,oliwkowobrązowy bardzo jasny,olive brown very light,d8ae3e
+1722,oliwkowobrązowy,olive brown,c69433
+1723,oliwkowobrązowy ciemny,olive brown dark,b37828
+1724,oliwkowobrązowy bardzo ciemny,olive brown very dark,75452e
+1725,oliwkowobrązowy najciemniejszy,olive brown the darkest,634732
+1726,stare złoto średnie,old gold medium,d68d2f
+1727,stare złoto,old gold,e58225
+1728,stare złoto ciemne,old dark gold,bd7529
+1729,stare złoto bardzo ciemne,old gold very dark,bd6c2a
+1730,stare złoto najjaśniejsze,old gold the brightest,f0d681
+1731,orzechowy,nutty,9a462e
+1732,orzechowy ciemny,walnut dark,593e33
+1733,orzechowy najciemniejszy,nut the darkest,39302b
+1734,miedziany bardzo ciemny,very dark copper,972f30
+1735,ceglasty najjaśniejszy,brick red the brightest,f4bf59
+1736,ceglasty bardzo jasny,brick red very bright,ed912c
+1737,ceglasty,brick red,da4040
+1738,ceglasty ciemny,brick red dark,ce2832
+1739,miodowy,honey,de612b
+1740,miodowy ciemny,honey dark,b9472c
+1741,mahoniowy jasny,light mahogany,b95545
+1742,mahoniowy,mahogany,8f352d
+1743,mahoniowy średni,medium mahogany,8a2c2a
+1744,mahoniowy ciemny,dark mahogany,7d3131
+1745,terakota najjaśniejsza,the brightest terracotta,f9d4c2
+1746,terakota bardzo jasna,terracotta very bright,e9b093
+1747,terakota jasna,light terracotta,d78879
+1748,terakota,terracotta,bd6758
+1749,terakota średnia,medium terracotta,983434
+1750,terakota ciemna,dark terracotta,842932
+1751,terakota bardzo ciemna,terracotta very dark,6f2d2f
+1752,zdrewniały róż ciemny,woody dark pink,c96a56
+1753,zdrewniały róż najjaśniejszy,woody pink the brightest,f6b285
+1754,zdrewniały róż jasny,woody light pink,f3ae91
+1755,zdrewniały róż,woody pink,e99277
+1756,czerwonokasztanowy jasny,light reddish chestnut,da4f54
+1757,czerwonokasztanowy,red chestnut,ba3339
+1758,czerwonokasztanowy średni,medium red chestnut,a62d34
+1759,czerwonokasztanowy ciemny,dark red chestnut,a32934
+1760,przybrudzony koralowy,dirty coral,cc3b4a
+1761,przybrudzony koralowy jasny,dirty light coral,d66255
+1762,antyczny fioletowy ciemny,tactic dark purple,64413f
+1763,antyczny fioletowy,tactic purple,897678
+1764,antyczny fioletowy jasny,tactical light purple,b29597
+1765,cielisty jasny,light white,f9e1c5
+1766,cielisty,and white,f0a860
+1767,cielisty średni,medium gray,e2914f
+1768,cielisty ciemny,gray dark,d9803e
+1769,cielisty bardzo ciemny,very dark white,cf6f56
+1770,piasek pustyni jasny,iasek of the clear desert,c8705c
+1771,piasek pustyni,iasek of the desert,ad5a4c
+1772,piasek pustyni ciemny,the shadow of the dark desert,87423b
+1773,piasek pustyni bardzo ciemny,the desert is very dark,733132
+1774,piasek pustyni najciemniejszy,the darkest of the desert,523730
+1775,złotobrązowy najjaśniejszy,dark brown the lightest,f6efc5
+1776,złotobrązowy bardzo jasny,dark brown very light,f1d2a4
+1777,złotobrązowy jasny,light brown,e6af6c
+1778,złotobrązowy,dark brown,be5f2f
+1779,złotobrązowy średni,dark brown medium,b1552c
+1780,złotobrązowy ciemny,dark brown,a6462d
+1781,złotobrązowy bardzo ciemny,dark brown very dark,b2902c
+1782,złotobrązowy najciemniejszy,dark brown the darkest,543932
+1783,kakaowy,akaowy,a7645b
+1784,kakaowy bardzo ciemny,aka very dark,5b362d
+1785,kakaowy najciemniejszy,aka the darkest,4a322e
+1786,brązowoczarny,red-black,2d1f1f
+1787,brudnobrązowy jasny,light reddish brown,bea261
+1788,brudnobrązowy średni,medium reddish brown,ac8b56
+1789,brudnobrązowy ciemny,dark reddish brown,826140
+1790,ecru,ecru,f2e2cb
+1791,czekoladowy najjaśniejszy,chocolate the brightest,e7dac7
+1792,szaroczekoladowy jasny,light chocolate brown,a79267
+1793,szaroczekoladowy,chocolate,6f5544
+1794,czekoladowy,chocolate,5f4536
+1795,szarobeżowy,beige,e7d8ad
+1796,szarobeżowy średni,medium beige,cbbf97
+1797,szarobeżowy ciemny,dark beige,9d8762
+1798,szarobeżowy bardzo ciemny,very dark beige,826d52
+1799,szarobrązowy ciemny,dark brown,5a5247
+1800,szarobrązowy bardzo ciemny,brownish very dark,53423a
+1801,oliwkowoszary najjaśniejszy,light gray light,dfcaab
+1802,oliwkowoszary średni,medium livish gray,b5b89b
+1803,oliwkowoszary,livish gray,737d4b
+1804,oliwkowoszary jasny,light livish gray,a0a771
+1805,szarobobrzasty jasny,hairy bright,e5e5dd
+1806,szarobobrzasty,profitable,aaa794
+1807,szarobobrzasty średni,earning medium,726f60
+1808,szarobobrzasty ciemny,hairy dark,444942
+1809,beżowocynowy,fruit fruit,c6c4b7
+1810,cynowy jasny,new bright,9a9c9b
+1811,cynowy,yny,5e696b
+1812,cynowy ciemny,new dark,384146
+1813,stalowy bardzo jasny,tall very bright,d0d0da
+1814,stalowy jasny,tall clear,adaeb3
+1815,stalowy,tall,6c798c
+1816,stalowy ciemny,tall dark,454f58
+1817,grafit,rafite,4e5754
+1818,ciemny grafit,dark graphite,2b302c
+1819,czarny,Zarny,231f20
+1500A,śnieżna biel,snow white,
+1526A,dyniowy blady,pumpkin pale,
+1535A,różowy niemowlęcy jasny,baby pink light,
+1555A,łososiowy róż jasny,light salmon pink,
+1555B,łososiowy róż,salmon pink,
+1555C,łososiowy róż bardzo ciemny,very dark salmon pink,
+1565A,malinowy średni,raspberry medium,
+1566A,żurawinowy rozbielony,cranberry whitened,
+1569A,brudny róż średni,dirty pink medium,
+1577A,różowy kwiat jabłoni,pink apple blossom,
+1579A,purpurowofioletowy bardzo ciemny,purple-violet very dark,
+1580A,fioletowy rozbielony,purple whitened,
+1585A,śliwkowy średni,medium plum,
+1587A,lawendowy rozbielony,lavender whitened,
+1588A,lawendowy ciemny,lavender dark,
+1588B,lawendowy jasny,light lavender,
+1598A,fuksja bardzo ciemna,very dark fuchsia,
+1608A,jagodowy ciemny,dark berry,
+1608B,fioletowoniebieski średni,violet-blue medium,
+1608C,fioletowoniebieski ciemny,dark violet blue,
+1620A,świetlisty niebieski ciemny,luminous dark blue,
+1626A,niebieskoszary jasny,light blue-gray,
+1626B,popielaty niebieski,gray blue,
+1630A,błękit niemowlęcy najjaśniejszy,baby blue the lightest,
+1634A,perłowy,pearl,
+1635A,stalowoszary średni,medium steel gray,
+1635B,myszkowy szary,mouse gray,
+1635C,cynowy średni,tin medium,
+1638A,niebieski antyczny bardzo ciemny,very dark antique blue,
+1644A,bobrzasty szary bardzo jasny,beaver gray very light,
+1657A,zielonkawoniebieski ciemny,greenish-blue dark,
+1664A,nefryt ciemny,dark jade,
+1671A,nefryt bardzo ciemny,very dark jade,
+1686A,zieleń leśna,forest green,
+1686B,zieleń leśna ciemna,dark forest green,
+1691A,zieleń mchu ciemna,dark moss green,
+1691B,zielony łagodna jasna,green mild light,
+1691C,zieleń mchu jasna,light moss green,
+1691D,zieleń mchu,moss green,
+1698A,zielony jabłkowy jasny,bright apple green,
+1704A,sosnowy ciemny,dark pine,
+1714A,beżowożółty jasny,light yellow,
+1714B,musztardowy jasny,light mustard,
+1714C,musztardowy średni,mustard medium,
+1721A,słomiany,straw,
+1725A,stare złoto jasne,old light gold,
+1730A,brązowy,Brown,
+1751A,zdrewniały róż bardzo ciemny,woody pink very dark,
+1762A,kakaowy średni,cocoa medium,
+1763A,kakaowy jasny,light cocoa,
+1782A,kawowobeżowy średni,coffee-beige medium,
+1782B,beżowobrązowy najjaśniejszy,beige light brown,
+1794A,brązowy korzenny ciemny,dark spicy brown,
+1794B,beżowoszary najciemniejszy,beige-gray the darkest,
+1801A,szarobrązowy jasny,light gray-brown,
