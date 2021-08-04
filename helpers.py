@@ -3,18 +3,34 @@ import numpy as np
 import matplotlib.pyplot as  plt
 
 
+def hex_string_to_dec_primaries(rgb):
+    '''Splits hex color code into three decimal values of the primary colors.
+    
+    Args:
+    - rgb - color code string (hex), can include '#' prefix
+    
+    Returns:
+    List of three ints (0-255)
+    '''
+    def to_dec(h):
+        return int('0x' + h, 16)
+    
+    rgb = rgb.lstrip('#')
+    return [to_dec(rgb[i:i+2]) for i in range(0, len(rgb), 2)]
+
+
 def swatch(base_color, compared_colors, base_label=False, compared_labels=False,
            vertical=False, size=2, whitespace=3):
     '''Displays evaluated list of similar colors next to the base color.
     
     Args:
-    base_col - color code recognized by Seaborn corresponding to the base
-    compared_colors - list of color codes recognized by Seaborn
-    base_label - label of the base color to be displayed in the plot
-    compared_labels - labels of the compared colors to be displayed in the plot
-    vertical - if True the swatches are plotted in a column, default: False
-    size - figure size multiplier, default: 2
-    whitespace - width of white lines separating swatches, default: 3
+    - base_col - color code recognized by Seaborn corresponding to the base
+    - compared_colors - list of color codes recognized by Seaborn
+    - base_label - label of the base color to be displayed in the plot
+    - compared_labels - labels of the compared colors to be displayed in the plot
+    - vertical - if True the swatches are plotted in a column, default: False
+    - size - figure size multiplier, default: 2
+    - whitespace - width of white lines separating swatches, default: 3
     '''
     # setting right orientation of data and labels
     if vertical:
