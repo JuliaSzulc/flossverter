@@ -1,6 +1,4 @@
-import numpy as np
-
-from helpers import hex_to_dec_primaries, hex_to_xyz
+from converters import hex_to_dec_primaries, hex_to_xyz
 
 
 def rgb_euclidean(base, other):
@@ -68,6 +66,6 @@ def xyz_euclidean(base, other):
     xyz_base = hex_to_xyz(base)
     xyz_other = hex_to_xyz(other)
     
-    score = np.sum((xyz_base - xyz_other)**2)
+    score = sum((xyz_base - xyz_other)**2)
         
     return score
