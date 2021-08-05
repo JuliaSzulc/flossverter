@@ -22,14 +22,14 @@ def hex_to_dec_primaries(color, arithmetic=False):
 
 
 def hex_to_xyz(color):
-    '''Converts standard RGB color code to XYZ coordinates using standard
-    illuminant D65.
+    '''Converts standard RGB color code to XYZ coordinates using the standard
+    illuminant D65 with 2° observer.
 
     Args:
     - color - color code string (hex), can include '#' prefix
 
     Returns:
-    1x3 numpy array of float XYZ coordinates
+    1x3 numpy array of float XYZ coordinates (0-1)
     '''
     rgb = hex_to_dec_primaries(color, arithmetic=True)
 
@@ -42,18 +42,29 @@ def hex_to_xyz(color):
 
     rgb_lin = np.array([[to_lin(c)] for c in rgb])
 
-    MATRIX = np.array([[0.4124, 0.3576, 0.1805],
-                       [0.2126, 0.7152, 0.0722],
-                       [0.0193, 0.1192, 0.9505]])
-    xyz = np.matmul(MATRIX, rgb_lin).flatten()
+    sRGB_MATRIX = np.array([[0.4124564, 0.3575761, 0.1804375],
+                            [0.2126729, 0.7151522, 0.0721750],
+                            [0.0193339, 0.1191920, 0.9503041]])
+    xyz = np.matmul(sRGB_MATRIX, rgb_lin).flatten()
 
     return xyz
 
 
 def xyz_to_lab(xyz):
-    XYZ_N = [95.0489, 100, 108.8840]
-    EPSILON = 0.008856
-    KAPPA = 903.3
+    '''Converts XYZ coordinates (0-1) to LAB using the standard illuminant D65
+    with 2° observer.
+
+    Args:
+    - xyz - list or numpy array with XYZ coordinates (0-1)
+
+    Returns:
+    List containing LAB coordinates
+    '''
+    XYZ_N = [0.95047, 1, 1.08883]
+    EPSILON = 0.008856 # 216 / 24389
+    KAPPA = 903.3 # 24389 / 27
+
+    x_r, y_r, z_r = np.array(xyz) / XYZ_N
     
     def f(t):
         if t > EPSILON:
@@ -61,8 +72,6 @@ def xyz_to_lab(xyz):
         else:
             return (KAPPA * t + 16) / 116
         
-    x_r, y_r, z_r = xyz / XYZ_N
-    
     L = 116 * f(y_r) - 16
     a = 500 * (f(x_r) - f(y_r))
     b = 200 * (f(y_r) - f(z_r))
