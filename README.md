@@ -24,3 +24,13 @@ I wanted to make a tool finding the closest Ariadna substitutes to a given DMC c
 [TODO]
 ### 2. Testing different colors differences formulas
 [TODO]
+
+___
+## Notes
+* I found myself very confused about Lab/CIELAB/CIEL\*a\*b\* etc. and, though I acknowledge that these are not supposed to be used interchangeably, these might be mixed up in this project so feel free to point out my errors.
+## Sources
+* [*Color difference* - Wikipedia](https://en.wikipedia.org/wiki/Color_difference)
+* [*CIELAB color space* - Wikipedia](https://en.wikipedia.org/wiki/CIELAB_color_space)
+* [Bruce Lindbloom's website](http://www.brucelindbloom.com/)
+* [*Completely Painless Programmer's Guide to XYZ, RGB, ICC, xyY, and TRCs* - Elle Stone](https://ninedegreesbelow.com/photography/xyz-rgb.html)
+* [*Delta E 101* - Zachary Schuessler](https://zschuessler.github.io/DeltaE/learn/)
