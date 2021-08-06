@@ -71,6 +71,7 @@ def xyz_euclidean(base, other):
         
     return score
 
+
 def cie76(base, other):
     '''Calculates squared delta E according to CIE76 standard.
     
@@ -89,3 +90,23 @@ def cie76(base, other):
     score = squared_euclidean(lab_base, lab_other)
         
     return score
+
+
+# def cie94(base, other):
+#     '''Calculates squared delta E according to CIE94 standard.
+    
+#     dE = (L2 - L1)^2 + (a2 - a1)^2 + (b2 - b1)^2
+    
+#     Args:
+#     - base - string with hex code of the base color (e.g. '#ff0000', '124f05')
+#     - other - string with hex code of the compared color
+    
+#     Returns:
+#     Calculated score (squared delta E)
+#     '''
+#     lab_base = xyz_to_lab(hex_to_xyz(base))
+#     lab_other = xyz_to_lab(hex_to_xyz(other))
+    
+#     score = squared_euclidean(lab_base, lab_other)
+        
+#     return score

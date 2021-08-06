@@ -58,3 +58,20 @@ def test_xyz_to_lab():
         [24.7353, 34.0740, 29.5064],
         atol=1e-4
     )
+
+
+def test_lab_to_lch():
+    '''Test for lab_to_lch'''
+    # BLUE
+    assert_allclose(
+        lab_to_lch([28.7787, 54.7349, -81.6143]),
+        [28.7787, 98.2690, 303.8479],
+        atol=1e-4
+    )
+
+    # RED
+    assert_allclose(
+        lab_to_lch([24.7353, 34.0740, 29.5064]),
+        [24.7353, 45.0740, 40.8909],
+        atol=1e-4
+    )

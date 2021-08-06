@@ -51,14 +51,14 @@ def hex_to_xyz(color):
 
 
 def xyz_to_lab(xyz):
-    '''Converts XYZ coordinates (0-1) to LAB using the standard illuminant D65
+    '''Converts XYZ coordinates (0-1) to Lab using the standard illuminant D65
     with 2° observer.
 
     Args:
     - xyz - list or numpy array with XYZ coordinates (0-1)
 
     Returns:
-    List containing LAB coordinates
+    List containing Lab coordinates
     '''
     XYZ_N = [0.95047, 1, 1.08883]
     EPSILON = 0.008856 # 216 / 24389
@@ -77,3 +77,22 @@ def xyz_to_lab(xyz):
     b = 200 * (f(y_r) - f(z_r))
     
     return [L, a, b]
+
+
+def lab_to_lch(lab):
+    '''Converts Lab coordinates to LCHab.
+
+    Args:
+    - lab - list or numpy array with Lab coordinates
+
+    Returns:
+    List containing LCH coordinates with H expressed in degrees.
+    '''
+    L, a, b = lab
+    
+    C = np.sqrt(a**2 + b**2)
+    H = np.degrees(np.arctan2(b, a))
+    if H < 0:
+        H += 360
+    
+    return [L, C, H]
