@@ -30,7 +30,7 @@ def rgb_gamma_correction(base, other):
     If the value is smaller than 128 the weights W = [wR, wG, wB] are [2, 4, 3]
     and [3, 4, 2] otherwise.
     
-    score = wR * (R2 - R1)^2 + wG * (G2 - G1)^2 +  wB * (B2 - B1)^2
+    score = wR (R2 - R1)^2 + wG(G2 - G1)^2 +  wB(B2 - B1)^2
     
     Args:
     - base - string with hex code of the base color (e.g. '#ff0000', '124f05')
@@ -75,7 +75,7 @@ def xyz_euclidean(base, other):
 def cie76(base, other):
     '''Calculates squared delta E according to CIE76 standard.
     
-    dE = (L2 - L1)^2 + (a2 - a1)^2 + (b2 - b1)^2
+    score = (L2 - L1)^2 + (a2 - a1)^2 + (b2 - b1)^2
     
     Args:
     - base - string with hex code of the base color (e.g. '#ff0000', '124f05')
@@ -92,21 +92,38 @@ def cie76(base, other):
     return score
 
 
-# def cie94(base, other):
-#     '''Calculates squared delta E according to CIE94 standard.
-    
-#     dE = (L2 - L1)^2 + (a2 - a1)^2 + (b2 - b1)^2
-    
-#     Args:
-#     - base - string with hex code of the base color (e.g. '#ff0000', '124f05')
-#     - other - string with hex code of the compared color
-    
-#     Returns:
-#     Calculated score (squared delta E)
-#     '''
-#     lab_base = xyz_to_lab(hex_to_xyz(base))
-#     lab_other = xyz_to_lab(hex_to_xyz(other))
-    
-#     score = squared_euclidean(lab_base, lab_other)
-        
-#     return score
+def cie94(base, other):
+    '''Calculates squared delta E according to CIE94 standard.
+
+    score = wL(L2 - L1)^2 + wC(C2 - C1)^2 + wH(C2 - C1)^2
+    where:
+    wL = 1
+    wC = 1 / (1 + K1C1)^2
+    wH = 1 / (1 + K2C1)^2
+    with:
+    K1 = 0.045
+    K2 = 0.015
+
+    Args:
+    - base - string with hex code of the base color (e.g. '#ff0000', '124f05')
+    - other - string with hex code of the compared color
+
+    Returns:
+    Calculated score (squared delta E)
+    '''
+    lch_base = lab_to_lch(xyz_to_lab(hex_to_xyz(base)))
+    lch_other = lab_to_lch(xyz_to_lab(hex_to_xyz(other)))
+
+    K1 = 0.045
+    K2 = 0.015
+
+    C_base = lch_base[1]
+
+    # squared denominators from the original formula
+    weights = [1,
+               1 / (1 + K1 * C_base)**2,
+               1 / (1 + K2 * C_base)**2]
+
+    score = squared_euclidean(lch_base, lch_other, weights)
+
+    return score
