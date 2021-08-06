@@ -91,8 +91,6 @@ def lab_to_lch(lab):
     L, a, b = lab
     
     C = np.sqrt(a**2 + b**2)
-    H = np.degrees(np.arctan2(b, a))
-    if H < 0:
-        H += 360
+    H = np.degrees(np.arctan2(b, a)) % 360
     
     return [L, C, H]

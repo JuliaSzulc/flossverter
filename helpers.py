@@ -19,7 +19,7 @@ def squared_euclidean(first, second, weights=None):
     if not weights:
         weights = [1] * len(first)
     
-    dist_sq = sum([w * (s - f)**2 for w, s, f in zip(weights, second, first)])
+    dist_sq = sum([w * (f - s)**2 for w, f, s in zip(weights, first, second)])
     
     return dist_sq
 
