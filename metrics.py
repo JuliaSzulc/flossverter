@@ -111,10 +111,11 @@ def cie94(base, other):
     L2, a2, b2 = xyz_to_lab(hex_to_xyz(other))
 
     C1 = np.sqrt(a1**2 + b1**2)
-    C2 = np.sqrt(a1**2 + b1**2)
+    C2 = np.sqrt(a2**2 + b2**2)
+
     dC = C1 - C2
     
-    dH = np.sqrt((a1 - a2)**2 + (b1 - b2)**2 - dC**2)
+    dH = np.sqrt(abs((a1 - a2)**2 + (b1 - b2)**2 - dC**2))
     
     K1 = 0.045
     K2 = 0.015
@@ -135,24 +136,23 @@ def ciede2000(base, other):
     Calculated score (squared delta E)
     '''
     # to LCH
-    lab_base = xyz_to_lab(hex_to_xyz(base))
-    L1, C1, H1 = lab_to_lch(lab_base)
-    
-    lab_other = xyz_to_lab(hex_to_xyz(other))
-    L2, C2, H2 = lab_to_lch(lab_other)
+    L1, a1, b1 = xyz_to_lab(hex_to_xyz(base))
+    L2, a2, b2 = xyz_to_lab(hex_to_xyz(other))
 
     # L
     dL_p = L2 - L1
     L_b = (L1 + L2) / 2
     
     # C
+    C1 = np.sqrt(a1**2 + b1**2)
+    C2 = np.sqrt(a1**2 + b1**2)
+    
     dC_p = C2 - C1
     C_b = (C1 + C2) / 2
     
-    a_p_const = 1 - np.sqrt(C_b**7 / (C_b**7 + 25**7))
-    a1, b1 = lab_base[-2:]
-    a2, b2 = lab_other[-2:]
-    a1_p, a2_p = a1 + a1 / 2 * a_p_const, a2 + a2 / 2 * a_p_const
+    a_p_const_sqroot = 1 - np.sqrt(C_b**7 / (C_b**7 + 25**7))
+    a1_p = a1 + a1 / 2 * a_p_const_sqroot
+    a2_p = a2 + a2 / 2 * a_p_const_sqroot
     
     C1_p, C2_p = np.sqrt(a1_p**2 + b1**2), np.sqrt(a2_p**2 + b2**2)
     C_bp = (C1_p + C2_p) / 2
