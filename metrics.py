@@ -139,11 +139,14 @@ def ciede2000(base, other):
     L1, a1, b1 = xyz_to_lab(hex_to_xyz(base))
     L2, a2, b2 = xyz_to_lab(hex_to_xyz(other))
 
-    # L
+    # fL
     dL_p = L2 - L1
     L_b = (L1 + L2) / 2
     
-    # C
+    S_L = 1 + (0.015 * (L_b - 50)**2) / np.sqrt(20 + (L_b - 50)**2)
+    fL = dL_p / S_L
+    
+    # fC
     C1 = np.sqrt(a1**2 + b1**2)
     C2 = np.sqrt(a2**2 + b2**2)
     
@@ -158,39 +161,42 @@ def ciede2000(base, other):
     C2_p = np.sqrt(a2_p**2 + b2**2)
     C_bp = (C1_p + C2_p) / 2
     
-    # H
+    S_C = 1 + 0.045 * C_bp
+    fC = dC_p / S_C
+    
+    # fH
     h1_p = np.degrees(np.arctan2(b1, a1_p)) % 360
     h2_p = np.degrees(np.arctan2(b2, a2_p)) % 360
     
     dh_p = h2_p - h1_p
     if (h_p_diff := abs(h1_p - h2_p)) > 180:
-        if h2_p > h1_p < 360:
+        if h2_p > h1_p:
+            dh_p -= 360
+        else:
             dh_p += 360
-        else:
-            dh_p - 360
             
-    H_bp = (h1_p + h2_p) / 2
+    h_p_sum = h1_p + h2_p
     if h_p_diff > 180:
-        if h_p_diff < 360:
-            H_bp += 180
+        if h_p_sum < 360:
+            h_p_sum += 360
         else:
-            H_bp -= 180
+            h_p_sum -= 360
+    H_bp = h_p_sum / 2
             
-    dH_p = 2 * np.sqrt(C1_p * C2_p) * np.sin(dh_p / 2)
-    
-    # denominators
-    # S_L
-    S_L = 1 + (0.015 * (L_b - 50)**2) / np.sqrt(20 + (L_b - 50)**2)
-    # S_C
-    S_C = 1 + 0.045 * C_bp
-    # S_H
-    T = 1 - 0.17 * np.cos(H_bp - 30) + 0.24 * np.cos(2 * H_bp + 6) - 0.2 * np.cos(4 * H_bp - 63)
-    S_H = 1 + 0.015 * C_bp * T
-       
-    # compensation
-    R_T = -2 * np.sqrt(C_bp**7 / (C_bp**7 + 25**7)) * np.sin(60 * np.exp(-((H_bp - 275) / 25)**2))
-    compensation = R_T * (dC_p / S_C) * (dH_p / S_H)
+    dH_p = 2 * np.sqrt(C1_p * C2_p) * np.sin(np.radians(dh_p / 2))
 
-    score = (dL_p / S_L)**2 +(dC_p / S_C)**2 + (dH_p / S_H)**2 + compensation
+    T = 1 - 0.17 * np.cos(np.radians(H_bp - 30)) +\
+        0.24 * np.cos(np.radians(2 * H_bp)) +\
+        0.32 * np.cos(np.radians(3 * H_bp + 6)) -\
+        0.2 * np.cos(np.radians(4 * H_bp - 63))
+    
+    S_H = 1 + 0.015 * C_bp * T
+    fH = dH_p / S_H
+       
+    # score
+    theta = np.radians(60 * np.exp(-((H_bp - 275) / 25)**2))
+    R_T = -2 * np.sqrt(C_bp**7 / (C_bp**7 + 25**7)) * np.sin(theta)
+
+    score = fL**2 + fC**2 + fH**2 + (R_T * fC * fH)
 
     return score
