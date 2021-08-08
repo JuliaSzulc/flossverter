@@ -95,11 +95,7 @@ def cie76(base, other):
 def cie94(base, other):
     '''Calculates squared delta E according to CIE94 standard.
 
-    score = wL(L1 - L2)^2 + wC(C1 - C2)^2 + wH(C1 - C2)^2
-    where:
-    wL = 1
-    wC = 1 / (1 + K1C1)^2
-    wH = 1 / (1 + K2C1)^2
+    score = (dL)^2 + (dC / (1 + K1C1))^2 + (sqrt(da^2 + db^2 - dC^2) / (1 + K2C1))^2
     with:
     K1 = 0.045
     K2 = 0.015
@@ -111,20 +107,19 @@ def cie94(base, other):
     Returns:
     Calculated score (squared delta E)
     '''
-    lch_base = lab_to_lch(xyz_to_lab(hex_to_xyz(base)))
-    lch_other = lab_to_lch(xyz_to_lab(hex_to_xyz(other)))
+    L1, a1, b1 = xyz_to_lab(hex_to_xyz(base))
+    L2, a2, b2 = xyz_to_lab(hex_to_xyz(other))
 
+    C1 = np.sqrt(a1**2 + b1**2)
+    C2 = np.sqrt(a1**2 + b1**2)
+    dC = C1 - C2
+    
+    dH = np.sqrt((a1 - a2)**2 + (b1 - b2)**2 - dC**2)
+    
     K1 = 0.045
     K2 = 0.015
 
-    C_base = lch_base[1]
-
-    # squared denominators from the original formula
-    weights = [1,
-               1 / (1 + K1 * C_base)**2,
-               1 / (1 + K2 * C_base)**2]
-
-    score = squared_euclidean(lch_base, lch_other, weights)
+    score = (L1 - L2)**2 + (dC / (1 + K1 * C1))**2 + (dH / (1 + K2 * C1))**2
 
     return score
 
