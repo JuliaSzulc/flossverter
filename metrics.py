@@ -145,16 +145,17 @@ def ciede2000(base, other):
     
     # C
     C1 = np.sqrt(a1**2 + b1**2)
-    C2 = np.sqrt(a1**2 + b1**2)
+    C2 = np.sqrt(a2**2 + b2**2)
     
     dC_p = C2 - C1
     C_b = (C1 + C2) / 2
     
-    a_p_const_sqroot = 1 - np.sqrt(C_b**7 / (C_b**7 + 25**7))
-    a1_p = a1 + a1 / 2 * a_p_const_sqroot
-    a2_p = a2 + a2 / 2 * a_p_const_sqroot
+    a_p_const_part = 1 - np.sqrt(C_b**7 / (C_b**7 + 25**7))
+    a1_p = a1 + a1 / 2 * a_p_const_part
+    a2_p = a2 + a2 / 2 * a_p_const_part
     
-    C1_p, C2_p = np.sqrt(a1_p**2 + b1**2), np.sqrt(a2_p**2 + b2**2)
+    C1_p = np.sqrt(a1_p**2 + b1**2)
+    C2_p = np.sqrt(a2_p**2 + b2**2)
     C_bp = (C1_p + C2_p) / 2
     
     # H

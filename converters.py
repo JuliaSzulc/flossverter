@@ -79,18 +79,19 @@ def xyz_to_lab(xyz):
     return [L, a, b]
 
 
-def lab_to_lch(lab):
-    '''Converts Lab coordinates to LCHab.
+# OBSOLETE
+# def lab_to_lch(lab):
+#     '''Converts Lab coordinates to LCHab.
 
-    Args:
-    - lab - list or numpy array with Lab coordinates
+#     Args:
+#     - lab - list or numpy array with Lab coordinates
 
-    Returns:
-    List containing LCH coordinates with H expressed in degrees.
-    '''
-    L, a, b = lab
+#     Returns:
+#     List containing LCH coordinates with H expressed in degrees.
+#     '''
+#     L, a, b = lab
     
-    C = np.sqrt(a**2 + b**2)
-    H = np.degrees(np.arctan2(b, a)) % 360
+#     C = np.sqrt(a**2 + b**2)
+#     H = np.degrees(np.arctan2(b, a)) % 360
     
-    return [L, C, H]
+#     return [L, C, H]

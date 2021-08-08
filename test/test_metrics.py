@@ -1,4 +1,4 @@
-from numpy.testing import assert_allclose
+from pytest import approx
 import json
 from numpy import sqrt
 
@@ -10,9 +10,11 @@ from metrics import *
 with open('test/colors.json', 'r') as f:
     COLORS = json.load(f)
 
-BLUE = COLORS['blue']
-RED = COLORS['red']
-ORANGE = COLORS['orange']
+BLUE = COLORS['blue']['hex']
+RED = COLORS['red']['hex']
+ORANGE = COLORS['orange']['hex']
+BLACK = COLORS['black']['hex']
+WHITE = COLORS['white']['hex']
 
 # def test_rgb_euclidean():
 #     '''Test for rgb_euclidean'''
@@ -30,42 +32,21 @@ ORANGE = COLORS['orange']
 
 
 def test_cie76():
-    assert_allclose(
-        sqrt(cie76(ORANGE['hex'], BLUE['hex'])),
-        142.297131,
-        atol=1e-3
-    )
-    
-    assert_allclose(
-        sqrt(cie76(ORANGE['hex'], RED['hex'])),
-        38.606102,
-        atol=1e-3
-    )
+    assert sqrt(cie76(ORANGE, BLUE)) == approx(142.297131, abs=1e-3)
+    assert sqrt(cie76(ORANGE, RED)) == approx(38.606102, abs=1e-3)
+    assert sqrt(cie76(ORANGE, ORANGE)) == 0
+    assert sqrt(cie76(BLACK, WHITE)) == approx(100, abs=1e-3)
 
 
 def test_cie94():
-    assert_allclose(
-        sqrt(cie94(ORANGE['hex'], BLUE['hex'])),
-        71.407307,
-        atol=1e-3
-    )
-    
-    assert_allclose(
-        sqrt(cie94(ORANGE['hex'], RED['hex'])),
-        27.671121,
-        atol=1e-3
-    )
+    assert sqrt(cie94(ORANGE, BLUE)) == approx(71.407307, abs=1e-3)
+    assert sqrt(cie94(ORANGE, RED)) == approx(27.671121, abs=1e-3)
+    assert sqrt(cie94(ORANGE, ORANGE)) == 0
+    assert sqrt(cie94(BLACK, WHITE)) == approx(100, abs=1e-3)
 
 
 def test_ciede2000():
-    assert_allclose(
-        sqrt(ciede2000(ORANGE['hex'], BLUE['hex'])),
-        55.732417,
-        atol=1e-3
-    )
-    
-    assert_allclose(
-        sqrt(ciede2000(ORANGE['hex'], RED['hex'])),
-        25.189495,
-        atol=1e-3
-    )
+    assert sqrt(ciede2000(ORANGE, BLUE)) == approx(55.732417, abs=1e-3)
+    assert sqrt(ciede2000(ORANGE, RED)) == approx(25.189495, abs=1e-3)
+    assert sqrt(ciede2000(ORANGE, ORANGE)) == 0
+    assert sqrt(ciede2000(BLACK, WHITE)) == approx(100, abs=1e-3)
