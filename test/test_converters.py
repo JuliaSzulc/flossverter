@@ -14,7 +14,6 @@ BLUE = COLORS['blue']
 RED = COLORS['red']
 
 def test_hex_to_dec_primaries():
-    '''Test for hex_to_dec_primaries'''
     assert hex_to_dec_primaries(BLUE['hex']) == BLUE['rgb']
     assert hex_to_dec_primaries(BLUE['hex'], arithmetic=True) ==\
         approx(BLUE['rgb_ari'])
@@ -23,18 +22,15 @@ def test_hex_to_dec_primaries():
 
 
 def test_hex_to_xyz():
-    '''Test for hex_to_xyz'''
     assert hex_to_xyz(BLUE['hex']) == approx(BLUE['xyz'], abs=1e-3)
     assert hex_to_xyz(RED['hex']) == approx(RED['xyz'], abs=1e-3)
 
 
 def test_xyz_to_lab():
-    '''Test for xyz_to_lab'''
     assert xyz_to_lab(BLUE['xyz']) == approx(BLUE['lab'], abs=1e-3)
     assert xyz_to_lab(RED['xyz']) == approx(RED['lab'], abs=1e-3)
 
 
-# def test_lab_to_lch():
-#     '''Test for lab_to_lch'''
-#     assert lab_to_lch(BLUE['lab']) == approx(BLUE['lch'], abs=1e-3)
-#     assert lab_to_lch(RED['lab']) == approx(RED['lch'], abs=1e-3)
+def test_lab_to_lch():
+    assert lab_to_lch(BLUE['lab']) == approx(BLUE['lch'], abs=1e-3)
+    assert lab_to_lch(RED['lab']) == approx(RED['lch'], abs=1e-3)

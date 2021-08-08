@@ -50,3 +50,15 @@ def test_ciede2000():
     assert sqrt(ciede2000(ORANGE, RED)) == approx(25.189495, abs=1e-3)
     assert sqrt(ciede2000(ORANGE, ORANGE)) == 0
     assert sqrt(ciede2000(BLACK, WHITE)) == approx(100, abs=1e-3)
+
+
+def test_cmc():
+    # l:c = 1:1
+    assert sqrt(cmc_1_1(ORANGE, BLUE)) == approx(126.335932, abs=1e-3)
+    assert sqrt(cmc_1_1(ORANGE, RED)) == approx(28.775007, abs=1e-3)
+    assert sqrt(cmc_1_1(ORANGE, ORANGE)) == 0
+
+    # l:c = 2:1
+    assert sqrt(cmc_2_1(ORANGE, BLUE)) == approx(125.147427, abs=1e-3)
+    assert sqrt(cmc_2_1(ORANGE, RED)) == approx(20.209151, abs=1e-3)
+    assert sqrt(cmc_2_1(ORANGE, ORANGE)) == 0
