@@ -1,5 +1,5 @@
-import pytest
 from numpy.testing import assert_allclose
+import json
 
 from converters import *
 
@@ -7,39 +7,39 @@ from converters import *
 # Reference values obtained using Bruce Justin Lindbloom calculator
 # http://www.brucelindbloom.com/index.html?ColorCalculator.html
 
-BLUE = '#2025c7'
-RED = '6e1f0f'
+with open('test/colors.json', 'r') as f:
+    COLORS = json.load(f)
 
+BLUE = COLORS['blue']
+RED = COLORS['red']
 
 def test_hex_to_dec_primaries():
     '''Test for hex_to_dec_primaries'''
-    assert hex_to_dec_primaries(BLUE) == [32, 37, 199]
+    assert hex_to_dec_primaries(BLUE['hex']) == BLUE['rgb']
     assert_allclose(
-        hex_to_dec_primaries(BLUE, arithmetic=True),
-        [0.125490, 0.145098, 0.780392],
-        atol=1e-6
+        hex_to_dec_primaries(BLUE['hex'], arithmetic=True),
+        BLUE['rgb_ari']
     )
 
-    assert hex_to_dec_primaries(RED) == [110, 31, 15]
+    assert hex_to_dec_primaries(RED['hex']) == RED['rgb']
     assert_allclose(
-        hex_to_dec_primaries(RED, arithmetic=True),
-        [0.431373, 0.121569, 0.058824],
-        atol=1e-6
+        hex_to_dec_primaries(RED['hex'], arithmetic=True),
+        RED['rgb_ari']
     )
 
 
 def test_hex_to_xyz():
     '''Test for hex_to_xyz'''
     assert_allclose(
-        hex_to_xyz(BLUE),
-        [0.115625, 0.057523, 0.545227],
-        atol=1e-6
+        hex_to_xyz(BLUE['hex']),
+        BLUE['xyz'],
+        atol=1e-3
     )
 
     assert_allclose(
-        hex_to_xyz(RED),
-        [0.070074, 0.043305, 0.009187],
-        atol=1e-6
+        hex_to_xyz(RED['hex']),
+        RED['xyz'],
+        atol=1e-3
     )
 
 
@@ -47,16 +47,16 @@ def test_xyz_to_lab():
     '''Test for xyz_to_lab'''
     # BLUE
     assert_allclose(
-        xyz_to_lab([0.115625, 0.057523, 0.545227]),
-        [28.7787, 54.7349, -81.6143],
-        atol=1e-4
+        xyz_to_lab(BLUE['xyz']),
+        BLUE['lab'],
+        atol=1e-3
     )
 
     # RED
     assert_allclose(
-        xyz_to_lab([0.070074, 0.043305, 0.009187]),
-        [24.7353, 34.0740, 29.5064],
-        atol=1e-4
+        xyz_to_lab(RED['xyz']),
+        RED['lab'],
+        atol=1e-3
     )
 
 
@@ -64,14 +64,14 @@ def test_lab_to_lch():
     '''Test for lab_to_lch'''
     # BLUE
     assert_allclose(
-        lab_to_lch([28.7787, 54.7349, -81.6143]),
-        [28.7787, 98.2690, 303.8479],
-        atol=1e-4
+        lab_to_lch(BLUE['lab']),
+        BLUE['lch'],
+        atol=1e-3
     )
 
     # RED
     assert_allclose(
-        lab_to_lch([24.7353, 34.0740, 29.5064]),
-        [24.7353, 45.0740, 40.8909],
-        atol=1e-4
+        lab_to_lch(RED['lab']),
+        RED['lch'],
+        atol=1e-3
     )
