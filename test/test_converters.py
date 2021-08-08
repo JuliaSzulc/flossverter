@@ -1,7 +1,7 @@
 from pytest import approx
 import json
 
-from converters import *
+from src.converters import *
 
 
 # Reference values obtained using Bruce Justin Lindbloom calculator

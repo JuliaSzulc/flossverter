@@ -2,7 +2,7 @@ from pytest import approx
 import json
 from numpy import sqrt
 
-from metrics import *
+from src.metrics import *
 
 # Reference values obtained using Bruce Justin Lindbloom calculator
 # http://www.brucelindbloom.com/index.html?ColorDifferenceCalc.html

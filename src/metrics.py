@@ -1,5 +1,5 @@
-from converters import *
-from helpers import squared_euclidean
+from src.converters import *
+from src.helpers import squared_euclidean
 
 
 def rgb_euclidean(base, other):
