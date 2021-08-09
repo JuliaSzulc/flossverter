@@ -1,4 +1,4 @@
-# [WORK IN PROGRESS] Mouline Translator
+# [WORK IN PROGRESS] Mouline Converter
 [Abstract - TODO]
 
 ## Glossary

@@ -4,6 +4,7 @@ dash-core-components==1.16.0
 dash-html-components==1.1.3
 dash-renderer==1.9.1
 dash-table==4.11.3
+gunicorn==20.0.4
 ipykernel==5.5.0
 ipython==7.21.0
 ipywidgets==7.6.3
