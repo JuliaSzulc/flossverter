@@ -1,0 +1,25 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+    - id: trailing-whitespace
+    - id: end-of-file-fixer
+    - id: requirements-txt-fixer
+    - id: check-yaml
+
+  - repo: https://github.com/psf/black
+    rev: 20.8b1
+    hooks:
+      - id: black
+        args: ["--config=pyproject.toml"]
+        language_version: python3.9
+
+  - repo: local
+    hooks:
+    - id: flake8
+      name: flake8
+      description: python-styleguide enforcement
+      entry: flake8
+      args: ["--config=setup.cfg"]
+      language: python
+      types: [python]
