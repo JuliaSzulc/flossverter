@@ -1,23 +1,23 @@
-name: Lint
+name: black
 
 on:
   [push, pull_request]
 
 jobs:
   linting:
-    name: Lint
+    name: black
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the commit that triggered the workflow
         uses: actions/checkout@v2
-        
+
       - name: Setup python
         uses: actions/setup-python@v2
         with:
           python-version: "3.9"
 
       - name: Set up env
-        run: pip install -e ".[linter]"
-        
+        run: pip install -e ".[formatter]"
+
       - name: Run flake8
-        run: flake8 src
+        run: black src
