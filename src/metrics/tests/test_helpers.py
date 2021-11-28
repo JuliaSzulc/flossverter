@@ -5,6 +5,7 @@ from numpy import sqrt
 from pytest import approx
 
 from src.metrics import squared_euclidean
+from src.metrics.helpers import Coordinates
 
 
 @pytest.mark.parametrize(
@@ -18,6 +19,6 @@ from src.metrics import squared_euclidean
     ],
 )
 def test_euclidean_without_weights(
-    first: Sequence[int, float], second: Sequence[int, float], result: float
+    first: Coordinates, second: Coordinates, result: float
 ):
     assert sqrt(squared_euclidean(first, second)) == approx(result, abs=1e-3)
