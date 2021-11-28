@@ -71,7 +71,7 @@ user_pkgs = (
 )
 
 setup(
-    name="mouline-converter",
+    name="mouline_converter",
     python_requires="~=3.9",
     extras_require={
         "base": base_pkgs,
