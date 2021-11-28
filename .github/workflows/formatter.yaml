@@ -5,7 +5,7 @@ on:
 
 jobs:
   linting:
-    name: Lint
+    name: Formatter
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the commit that triggered the workflow
