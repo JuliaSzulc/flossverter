@@ -1,4 +1,6 @@
-[![flake8](https://github.com/JuliaSzulc/mouline_converter/actions/workflows/flake8.yml/badge.svg?branch=main&event=push)](https://github.com/JuliaSzulc/mouline_converter/actions/workflows/flake8.yml) [![black](https://github.com/JuliaSzulc/mouline_converter/actions/workflows/black.yaml/badge.svg?branch=main&event=push)](https://github.com/JuliaSzulc/mouline_converter/actions/workflows/black.yaml)
+[![flake8](https://github.com/JuliaSzulc/mouline_converter/actions/workflows/flake8.yml/badge.svg?branch=main&event=push)](https://github.com/JuliaSzulc/mouline_converter/actions/workflows/flake8.yml)
+[![black](https://github.com/JuliaSzulc/mouline_converter/actions/workflows/black.yaml/badge.svg?branch=main&event=push)](https://github.com/JuliaSzulc/mouline_converter/actions/workflows/black.yaml)
+[![tests](https://github.com/JuliaSzulc/mouline_converter/actions/workflows/tests.yml/badge.svg?branch=main&event=push)](https://github.com/JuliaSzulc/mouline_converter/actions/workflows/tests.yml)
 
 ## TL;DR quickstart
 - **USER MODE** - run the app and notebooks:
