@@ -1,17 +1,20 @@
 """
 Converters for colors in LAB format.
 """
+from typing import Sequence
+
 import numpy as np
 
 
-def lab_to_lch(lab):
-    """Converts Lab coordinates to LCHab.
+def lab_to_lch(lab: Sequence[float]) -> list[float]:
+    """
+    Converts Lab coordinates to LCHab.
 
     Args:
-    - lab - list or numpy array with Lab coordinates
+    lab (Sequence[float]): List or numpy array with Lab coordinates.
 
     Returns:
-    List containing LCH coordinates with H expressed in degrees.
+    list[float]: List containing LCH coordinates with H expressed in degrees.
     """
     L, a, b = lab
 

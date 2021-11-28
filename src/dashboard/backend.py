@@ -7,7 +7,6 @@ from typing import Union
 import pandas as pd
 
 from src.metrics import (
-    rgb_euclidean,
     cie76,
     cie94,
     ciede2000,
@@ -21,14 +20,13 @@ from src.metrics import (
 class Backend:
     """
     Class storing all CSV files with mouline codes to RGB convertions.
+
+    Args:
+        dmc_path (Union[Path, str],): Path to DMC convertion sheet in CSV.
+        ariadna_path (Union[Path, str],): Path to Ariadna convertion sheet in CSV.
     """
 
     def __init__(self, dmc_path: Union[Path, str], ariadna_path: Union[Path, str]):
-        """
-        Args:
-            dmc_path (Union[Path, str],): Path to DMC convertion sheet in CSV.
-            ariadna_path (Union[Path, str],): Path to Ariadna convertion sheet in CSV.
-        """
         self._dmc_df = pd.read_csv(dmc_path, index_col="number")
         self._ariadna_df = pd.read_csv(ariadna_path, index_col="number")
 
@@ -69,9 +67,11 @@ class Backend:
         """
         return self._dmc_df.at[dmc, "rgb"]
 
-    def find_similar(self, dmc: str, metric: str, n=5) -> tuple[list[str], list[str]]:
+    def find_similar(
+        self, dmc: str, metric: str, n: int = 5
+    ) -> tuple[list[str], list[str]]:
         """
-        Finds colors similar to the given one using passed
+        Finds colors similar to the given one using passed.
 
         Args:
             dmc (str): DMC mouline identifier.

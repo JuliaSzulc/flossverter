@@ -1,3 +1,5 @@
+from typing import Sequence
+
 import pytest
 from numpy import sqrt
 from pytest import approx
@@ -15,5 +17,7 @@ from src.metrics import squared_euclidean
         ((), (), 0),
     ],
 )
-def test_euclidean_without_weights(first, second, result):
+def test_euclidean_without_weights(
+    first: Sequence[int, float], second: Sequence[int, float], result: float
+):
     assert sqrt(squared_euclidean(first, second)) == approx(result, abs=1e-3)

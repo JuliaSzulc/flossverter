@@ -48,7 +48,7 @@ def draw_graph(
         data=go.Heatmap(
             z=[list(range(n)), [n] * n],
             x=compared_labels,
-            y=["Ariadna ", "DMC {} ".format(base_label)],
+            y=["Ariadna ", f"DMC {base_label} "],
             colorscale=compared_colors + [base_color],
             showscale=False,
             xgap=5,

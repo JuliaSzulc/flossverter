@@ -59,7 +59,7 @@ def rgb_euclidean_gamma_correction(base: str, other: str) -> float:
     return score
 
 
-def xyz_euclidean(base, other):
+def xyz_euclidean(base: str, other: str) -> float:
     """
     Calculates the sum of squares of XYZ color coordinates.
 

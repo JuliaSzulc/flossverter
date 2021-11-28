@@ -5,7 +5,9 @@ from typing import Optional, Sequence
 
 
 def squared_euclidean(
-    first: Sequence, second: Sequence, weights: Optional[Sequence] = None
+    first: Sequence[int, float],
+    second: Sequence[int, float],
+    weights: Optional[Sequence[int, float]] = None,
 ) -> float:
     """
     Calculates the sum of squared differences of two lists/arrays.
@@ -14,9 +16,9 @@ def squared_euclidean(
     corresponding weight.
 
     Args:
-        first (Sequence): List or array of coordinates.
-        second (Sequence): List or array of coordinates.
-        weights (Optional[Sequence], optional): Optional list or array of weights.
+        first (Sequence[int, float]): List or array of coordinates.
+        second (Sequence[int, float]): List or array of coordinates.
+        weights (Optional[Sequence[int, float]]): Optional list or array of weights.
             Defaults to None.
 
     Returns:

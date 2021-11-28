@@ -20,14 +20,14 @@ def hex_to_dec_primaries(
     Returns:
         Union[list[int], list[float]]: List of three integers (0-255) or floats (0-1)
     """
+    color = color.lstrip("#")
 
-    def to_dec(h):
+    def to_dec(h: str) -> int:
         dec = int("0x" + h, 16)
         if arithmetic:
             dec /= 255
         return dec
 
-    color = color.lstrip("#")
     return [to_dec(color[i : i + 2]) for i in range(0, len(color), 2)]
 
 
@@ -43,10 +43,9 @@ def hex_to_xyz(color: str) -> np.ndarray:
     Returns:
         np.ndarray[float]: 1x3 numpy array of float XYZ coordinates (0-1)
     """
-
     rgb = hex_to_dec_primaries(color, arithmetic=True)
 
-    def to_lin(c):
+    def to_lin(c: float) -> float:
         if c > 0.04045:
             A = 0.055
             return ((c + A) / (1 + A)) ** 2.4

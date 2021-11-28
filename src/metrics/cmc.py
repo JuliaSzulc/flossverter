@@ -16,7 +16,7 @@ def _cmc(base: str, other: str, unit_lc_ratio: bool = True) -> float:
         base (str): string with hex code of the base color.
         other (str): string with hex code of the compared color.
         unit_lc_ratio (bool, optional): If true l:c=1:1 (imperceptibility), otherwise
-        l:c=2:1 (acceptability). Defaults to True.
+            l:c=2:1 (acceptability). Defaults to True.
 
     Returns:
         float: Calculated score (squared delta E).
@@ -61,7 +61,7 @@ def _cmc(base: str, other: str, unit_lc_ratio: bool = True) -> float:
 
 def cmc_1_1(base: str, other: str) -> float:
     """
-    Wrapper for cmc function with l:c = 1:1
+    Wrapper for cmc function with l:c = 1:1.
 
     Args:
         base (str): string with hex code of the base color.
@@ -75,7 +75,7 @@ def cmc_1_1(base: str, other: str) -> float:
 
 def cmc_2_1(base: str, other: str) -> float:
     """
-    Wrapper for cmc function with l:c = 1:1
+    Wrapper for cmc function with l:c = 1:1.
 
     Args:
         base (str): string with hex code of the base color.

@@ -1,18 +1,20 @@
 """
 Converters colors in XYZ format.
 """
+from typing import Sequence
+
 import numpy as np
 
 
-def xyz_to_lab(xyz):
-    """Converts XYZ coordinates (0-1) to Lab using the standard illuminant D65
-    with 2° observer.
+def xyz_to_lab(xyz: Sequence[float]) -> list[float]:
+    """
+    Converts XYZ coordinates to Lab using the standard illuminant D65 with 2° observer.
 
     Args:
-    - xyz - list or numpy array with XYZ coordinates (0-1)
+        xyz (Sequence[float]): List or numpy array with XYZ coordinates (0-1).
 
     Returns:
-    List containing Lab coordinates
+        list[float]: List containing Lab coordinates.
     """
     XYZ_N = [0.95047, 1, 1.08883]
     EPSILON = 0.008856  # 216 / 24389
@@ -20,7 +22,7 @@ def xyz_to_lab(xyz):
 
     x_r, y_r, z_r = np.array(xyz) / XYZ_N
 
-    def f(t):
+    def f(t: float) -> float:
         if t > EPSILON:
             return np.cbrt(t)
         else:
