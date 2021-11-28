@@ -1,0 +1,23 @@
+name: Formatter
+
+on:
+  [push, pull_request]
+
+jobs:
+  linting:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the commit that triggered the workflow
+        uses: actions/checkout@v2
+        
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
+
+      - name: Set up env
+        run: pip install -e ".[formatter]"
+        
+      - name: Run flake8
+        run: black src
