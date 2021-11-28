@@ -77,7 +77,7 @@ setup(
         "base": base_pkgs,
         "dev": dev_pkgs,
         "formatter": formatter_pkgs,
-        "linter": lint_pkgs,
+        "linter": linter_pkgs,
         "notebook": notebook_pkgs,
         "test": test_pkgs,
         "user": user_pkgs,
