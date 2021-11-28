@@ -1,5 +1,3 @@
-from typing import Sequence
-
 import pytest
 from numpy import sqrt
 from pytest import approx
