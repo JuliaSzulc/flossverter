@@ -1,3 +1,5 @@
+[![flake8](https://github.com/JuliaSzulc/mouline_converter/actions/workflows/flake8.yml/badge.svg?branch=main&event=push)](https://github.com/JuliaSzulc/mouline_converter/actions/workflows/flake8.yml) [![black](https://github.com/JuliaSzulc/mouline_converter/actions/workflows/black.yaml/badge.svg?branch=main&event=push)](https://github.com/JuliaSzulc/mouline_converter/actions/workflows/black.yaml)
+
 ## TL;DR quickstart
 - **USER MODE** - run the app and notebooks:
 `pip install -e ".[user]"`
