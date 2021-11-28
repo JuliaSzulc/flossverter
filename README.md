@@ -1,3 +1,9 @@
+## TL;DR quickstart
+- **USER MODE** - run the app and notebooks:
+`pip install -e ".[user]"`
+- **DEV MODE** - install all dependencies:
+`pip install -e ".[dev]"`
+
 # [WORK IN PROGRESS] Mouline Converter
 [Abstract - TODO]
 
