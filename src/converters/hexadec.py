@@ -13,9 +13,9 @@ def hex_to_dec_primaries(
     Splits hex color code into three decimal values of the primary colors.
     
     Args:
-    color (str): Color code string (hex), can include '#' prefix
-    arithmetic (bool, optional): If True returns float values between 0 and 1.
-        Defaults to False.
+        color (str): Color code string (hex), can include '#' prefix
+        arithmetic (bool, optional): If True returns float values between 0 and 1.
+            Defaults to False.
 
     Returns:
         Union[list[int], list[float]]: List of three integers (0-255) or floats (0-1)
