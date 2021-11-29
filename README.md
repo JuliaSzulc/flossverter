@@ -1,8 +1,9 @@
 ![python](https://img.shields.io/badge/python-v.3.9-blue) [![license](https://img.shields.io/github/license/juliaszulc/mouline_converter)](https://github.com/JuliaSzulc/mouline_converter/blob/main/LICENSE.md)
 
+[![tests](https://img.shields.io/github/workflow/status/juliaszulc/mouline_converter/tests?label=tests)](https://github.com/JuliaSzulc/mouline_converter/actions/workflows/tests.yml) <!-- [START BADGES] --><!-- [END BADGES] -->
+
 [![flake8](https://img.shields.io/github/workflow/status/juliaszulc/mouline_converter/flake8?label=flake8)](https://github.com/JuliaSzulc/mouline_converter/actions/workflows/flake8.yml)
 [![black](https://img.shields.io/github/workflow/status/juliaszulc/mouline_converter/black?label=black)](https://github.com/JuliaSzulc/mouline_converter/actions/workflows/black.yaml)
-[![tests](https://img.shields.io/github/workflow/status/juliaszulc/mouline_converter/tests?label=tests)](https://github.com/JuliaSzulc/mouline_converter/actions/workflows/tests.yml)
 
 ![Heroku](https://pyheroku-badge.herokuapp.com/?app=mouline-converter&style=flat)  
 
