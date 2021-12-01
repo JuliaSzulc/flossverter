@@ -7,6 +7,9 @@ jobs:
   linting:
     name: tests
     runs-on: ubuntu-latest
+    env:
+      COV_PATH: coverage.txt
+
     steps:
       - name: Checkout the commit that triggered the workflow
         uses: actions/checkout@v2
@@ -20,4 +23,19 @@ jobs:
         run: pip install -e ".[test]"
 
       - name: Run pytest
-        run: pytest
+        run: pytest > ${{ env.COV_PATH }}
+
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage
+          path: ${{ env.COV_PATH }}
+
+      - name: Trigger coverage workflow
+        if: success()
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.REPO_GHA_PAT }}
+          repository: ${{ github.repository }}
+          event-type: trigger-coverage
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'

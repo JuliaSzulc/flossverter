@@ -1,0 +1,73 @@
+name: coverage
+
+on:
+  repository_dispatch:
+    types: [trigger-coverage]
+
+jobs:
+  coverage:
+    name: Generate badge
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the same code
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.client_payload.sha }}
+
+      - name: Download artifact - coverage from tests
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          workflow: tests.yml
+          workflow_conclusion: success
+          name: coverage
+
+      - name: Extract total coverage
+        id: total_cov
+        run: |
+          total=$(grep -oP "TOTAL.* \K\d+(?=%)" coverage.txt)
+          echo ::set-output name=total::$total
+          echo "Total coverage: ${total}%"
+
+      - name: Create badge
+        id: create_url
+        run: |
+          TOTAL=${{ steps.total_cov.outputs.total }}
+          if [[ $TOTAL -gt 90 ]]
+          then
+              color=brightgreen
+          elif [[ $TOTAL -gt 80 ]]
+          then
+              color=green
+          elif [[ $TOTAL -gt 70 ]]
+          then
+              color=yellowgreen
+          elif [[ $TOTAL -gt 60 ]]
+          then
+              color=yellow
+          elif [[ $TOTAL -gt 50 ]]
+          then
+              color=orange
+          else
+              color=red
+          fi
+          url="https://img.shields.io/static/v1?label=coverage&message=${TOTAL}%&color=${color}"
+          echo ::set-output name=url::$url
+          echo "shields.io url: ${url}"
+
+      - name: Update README.md
+        uses: wow-actions/add-badges@v1
+        env:
+          repo_url: ${{ github.event.repository.html_url }}
+          repo_name: ${{ github.event.repository.name }}
+          repo_owner: ${{ github.event.repository.owner.login }}
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          badges: |
+            [
+              {
+                "badge": "${{ steps.create_url.outputs.url }}",
+                "alt": "Coverage",
+                "link": "${{ steps.create_url.outputs.url }}"
+              }
+            ]
