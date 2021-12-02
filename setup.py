@@ -2,10 +2,8 @@ from setuptools import setup
 
 
 base_pkgs = [
-    "dash~=1.20",
-    "dash-bootstrap-components~=0.13",
-    "dash-core-components~=1.16",
-    "dash-html-components~=1.1",
+    "dash~=2.0",
+    "dash-bootstrap-components~=1.0",
     "numpy~=1.21",
     "pandas~=1.2",
     "plotly~=5.4",
