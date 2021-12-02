@@ -63,10 +63,7 @@ dev_pkgs = (
 )
 
 
-user_pkgs = (
-    base_pkgs
-    + notebook_pkgs
-)
+user_pkgs = base_pkgs + notebook_pkgs
 
 setup(
     name="mouline_converter",

@@ -29,8 +29,7 @@ class Backend:
     def __init__(self, dmc_path: Union[Path, str], ariadna_path: Union[Path, str]):
         self._dmc_df = pd.read_csv(dmc_path, index_col="number")
         self._ariadna_df = pd.read_csv(ariadna_path, index_col="number")
-
-        self.metrics = {
+        self.METRICS = {
             "RGB euclidean": rgb_euclidean,
             "RGB with gamma correction": rgb_euclidean_gamma_correction,
             "CIE76": cie76,
@@ -39,7 +38,7 @@ class Backend:
             "CMC 1:1": cmc_1_1,
             "CMC 2:1": cmc_2_1,
         }
-        self.default_metric = "CIEDE2000"
+        self.DEFAULT_METRIC = "CIEDE2000"
 
     @property
     def dmc_df(self) -> pd.DataFrame:
@@ -68,30 +67,28 @@ class Backend:
         return self._dmc_df.at[dmc, "rgb"]
 
     def find_similar(
-        self, dmc: str, metric: str, n: int = 5
+        self, base_color: str, metric: str, n: int = 5
     ) -> tuple[list[str], list[str]]:
         """
         Finds colors similar to the given one using passed.
 
         Args:
-            dmc (str): DMC mouline identifier.
+            base_color (str): Hex RGB code of the base color.
             metric (str): Metric to use.
             n (int, optional): Expected number of similar colors. Defaults to 5.
 
         Returns:
-            tuple[list[str], list[str]]: Lists of DMC identifiers and hexadecimal codes
-                of similar colors.
+            tuple[list[str], list[str]]: Lists of Ariadna identifiers and hexadecimal
+                codes of similar colors.
         """
-        base_color = self.dmc_to_hex(dmc)
-
-        metric_f = self.metrics[metric]
+        metric_f = self.METRICS[metric]
 
         self._ariadna_df["score"] = [
             metric_f(base_color, c) for c in self._ariadna_df["rgb"]
         ]
         top_colors_rows = self._ariadna_df.nsmallest(n, "score")
 
-        top_dmc_codes = top_colors_rows.index.to_list()
+        top_ariadna_codes = top_colors_rows.index.to_list()
         top_colors = top_colors_rows["rgb"].to_list()
 
-        return top_dmc_codes, top_colors
+        return top_ariadna_codes, top_colors
