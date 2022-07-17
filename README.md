@@ -11,13 +11,14 @@
 
 ![Heroku](https://pyheroku-badge.herokuapp.com/?app=flossverter&style=flat)
 
+# 🧵 FlossVerter - Mouline Color Converter
+
 ### TL;DR quickstart
 - **USER MODE** - run the app and notebooks:
 `pip install -e ".[user]"`
 - **DEV MODE** - install all dependencies:
 `pip install -e ".[dev]"`
 
-# 🧵 FlossVerter - Mouline Color Converter
 [Abstract - TODO]
 
 ## Glossary
