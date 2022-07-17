@@ -1,7 +1,7 @@
 import pytest
 from pytest import approx
 
-from src.converters import lab_to_lch
+from converters import lab_to_lch
 
 
 @pytest.mark.parametrize("color", ["red", "blue"])

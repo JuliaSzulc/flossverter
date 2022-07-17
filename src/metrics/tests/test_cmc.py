@@ -2,7 +2,7 @@ import pytest
 from numpy import sqrt
 from pytest import approx
 
-from src.metrics import _cmc, cmc_1_1, cmc_2_1
+from metrics import _cmc, cmc_1_1, cmc_2_1
 
 
 @pytest.mark.parametrize(

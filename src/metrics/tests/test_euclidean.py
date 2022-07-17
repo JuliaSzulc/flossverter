@@ -2,7 +2,7 @@ import pytest
 from numpy import sqrt
 from pytest import approx
 
-from src.metrics import rgb_euclidean, rgb_euclidean_gamma_correction, xyz_euclidean
+from metrics import rgb_euclidean, rgb_euclidean_gamma_correction, xyz_euclidean
 
 
 @pytest.mark.parametrize(

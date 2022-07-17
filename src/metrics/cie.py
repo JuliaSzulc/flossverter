@@ -3,8 +3,8 @@ Metrics utilizing CIE standards.
 """
 import numpy as np
 
-from src.converters import hex_to_xyz, xyz_to_lab
-from src.metrics import squared_euclidean
+from converters import hex_to_xyz, xyz_to_lab
+from metrics import squared_euclidean
 
 
 def cie76(base: str, other: str) -> float:

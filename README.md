@@ -1,15 +1,15 @@
-![python](https://img.shields.io/badge/python-v.3.9-blue) [![license](https://img.shields.io/github/license/juliaszulc/mouline_converter)](https://github.com/JuliaSzulc/mouline_converter/blob/main/LICENSE.md)
+![python](https://img.shields.io/badge/python-v.3.9-blue) [![license](https://img.shields.io/github/license/juliaszulc/flossverter)](https://github.com/JuliaSzulc/flossverter/blob/main/LICENSE.md)
 
-[![tests](https://img.shields.io/github/workflow/status/juliaszulc/mouline_converter/tests?label=tests)](https://github.com/JuliaSzulc/mouline_converter/actions/workflows/tests.yml)
-[![flake8](https://img.shields.io/github/workflow/status/juliaszulc/mouline_converter/flake8?label=flake8)](https://github.com/JuliaSzulc/mouline_converter/actions/workflows/flake8.yml)
-[![black](https://img.shields.io/github/workflow/status/juliaszulc/mouline_converter/black?label=black)](https://github.com/JuliaSzulc/mouline_converter/actions/workflows/black.yaml)
+[![tests](https://img.shields.io/github/workflow/status/juliaszulc/flossverter/tests?label=tests)](https://github.com/JuliaSzulc/flossverter/actions/workflows/tests.yml)
+[![flake8](https://img.shields.io/github/workflow/status/juliaszulc/flossverter/flake8?label=flake8)](https://github.com/JuliaSzulc/flossverter/actions/workflows/flake8.yml)
+[![black](https://img.shields.io/github/workflow/status/juliaszulc/flossverter/black?label=black)](https://github.com/JuliaSzulc/flossverter/actions/workflows/black.yaml)
 
 <!-- [START BADGES] -->
 <!-- Please keep comment here to allow auto update -->
 [![Coverage](https://img.shields.io/static/v1?label=coverage&message=93%&color=brightgreen)](https://img.shields.io/static/v1?label=coverage&message=93%&color=brightgreen)
 <!-- [END BADGES] -->
 
-![Heroku](https://pyheroku-badge.herokuapp.com/?app=mouline-converter&style=flat)
+![Heroku](https://pyheroku-badge.herokuapp.com/?app=flossverter&style=flat)
 
 ### TL;DR quickstart
 - **USER MODE** - run the app and notebooks:
@@ -17,7 +17,7 @@
 - **DEV MODE** - install all dependencies:
 `pip install -e ".[dev]"`
 
-# [WORK IN PROGRESS] Mouline Converter
+#🧵 FlossVerter - Mouline Color Converter
 [Abstract - TODO]
 
 ## Glossary

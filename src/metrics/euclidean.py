@@ -1,8 +1,8 @@
 """
 Metrics based on euclidean distances.
 """
-from src.converters import hex_to_dec_primaries, hex_to_xyz
-from src.metrics import squared_euclidean
+from converters import hex_to_dec_primaries, hex_to_xyz
+from metrics import squared_euclidean
 
 
 def rgb_euclidean(base: str, other: str) -> float:

@@ -2,7 +2,7 @@ import pytest
 from numpy import sqrt
 from pytest import approx
 
-from src.metrics import cie76, cie94, ciede2000
+from metrics import cie76, cie94, ciede2000
 
 
 @pytest.mark.parametrize(

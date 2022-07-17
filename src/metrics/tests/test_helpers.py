@@ -2,8 +2,8 @@ import pytest
 from numpy import sqrt
 from pytest import approx
 
-from src.metrics import squared_euclidean
-from src.metrics.helpers import Coordinates
+from metrics import squared_euclidean
+from metrics.helpers import Coordinates
 
 
 @pytest.mark.parametrize(

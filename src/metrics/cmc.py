@@ -3,7 +3,7 @@ Metrics using CMC standard.
 """
 import numpy as np
 
-from src.converters import hex_to_xyz, lab_to_lch, xyz_to_lab
+from converters import hex_to_xyz, lab_to_lch, xyz_to_lab
 
 
 def _cmc(base: str, other: str, unit_lc_ratio: bool = True) -> float:

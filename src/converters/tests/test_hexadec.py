@@ -1,7 +1,7 @@
 import pytest
 from pytest import approx
 
-from src.converters import hex_to_dec_primaries, hex_to_xyz
+from converters import hex_to_dec_primaries, hex_to_xyz
 
 
 @pytest.mark.parametrize("color", ["red", "blue"])

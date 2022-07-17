@@ -6,7 +6,7 @@ from typing import Union
 
 import pandas as pd
 
-from src.metrics import (
+from metrics import (
     cie76,
     cie94,
     ciede2000,
