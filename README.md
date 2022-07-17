@@ -6,7 +6,7 @@
 
 <!-- [START BADGES] -->
 <!-- Please keep comment here to allow auto update -->
-[![Coverage](https://img.shields.io/static/v1?label=coverage&message=93%&color=brightgreen)](https://img.shields.io/static/v1?label=coverage&message=93%&color=brightgreen)
+[![Coverage](https://img.shields.io/static/v1?label=coverage&message=88%&color=green)](https://img.shields.io/static/v1?label=coverage&message=88%&color=green)
 <!-- [END BADGES] -->
 
 ![Heroku](https://pyheroku-badge.herokuapp.com/?app=flossverter&style=flat)
