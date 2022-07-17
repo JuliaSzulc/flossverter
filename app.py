@@ -9,7 +9,9 @@ from src.dashboard import Backend, clear_graph, draw_graph
 backend = Backend(dmc_path="data/dmc.csv", ariadna_path="data/ariadna.csv")
 
 app = dash.Dash(
-    __name__, external_stylesheets=[dbc.themes.LITERA], title="🧵 FlossVerter - Mouline Color Converter"
+    __name__,
+    external_stylesheets=[dbc.themes.LITERA],
+    title="FlossVerter - Mouline Color Converter",
 )
 server = app.server
 
