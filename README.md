@@ -17,7 +17,7 @@
 - **DEV MODE** - install all dependencies:
 `pip install -e ".[dev]"`
 
-#🧵 FlossVerter - Mouline Color Converter
+# 🧵 FlossVerter - Mouline Color Converter
 [Abstract - TODO]
 
 ## Glossary
